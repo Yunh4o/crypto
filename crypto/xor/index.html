@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xor</title>
+    <style>
+          
+
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text">
+            <h2>异或加密</h2>
+            <p>位加密技术是一种流加密技术，每次加密一个位，采用异或运算进行加密，异或运算符“^”的作用是判断两个相应位的值是否“相异”，若为异，则结果为1，否则为0.</p>
+            <p></p>
+        </div>
+        <form action="xor.php" method="post">
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>明文</th>
+                        <td>
+                            <input type="text" name="plaintext" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>秘钥</th>
+                        <td>
+                            <input type="text" name="encodeKey" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="encode" name="submit">异或</button>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>秘钥</th>
+                        <td>
+                            <input type="text" name="fileEncodeKey" id="">
+                        </td>
+                        <td><button name="submit" type="submit" value="fileEncode">文本加密</button></td>
+                    </tr>
+                </table>
+
+            </div>
+            </form>
+            <div class="img">
+                <img src="" alt="">
+            </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fence</title>
+    <style>
+        
+
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text">
+            <h2>栅栏加密</h2>
+            <p>栅栏加密过程是：把要被加密的消息按照锯齿状一上一下的写法写出来。因为加密过程的几何形状类似于栅栏的上半部分，因此称为栅栏加密。</p>
+        </div>
+
+        <form action="fence.php" method="post">
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>明文</th>
+                        <td>
+                            <input type="text" name="plaintext" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="encode" name="submit">加密</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>密文</th>
+                        <td>
+                            <input type="text" name="ciphertext" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="decode" name="submit">解密</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>加密</th>
+
+                        <td><button name="submit" type="submit" value="fileEncode">文本加密</button></td>
+                    </tr>
+                    <tr>
+                        <th>解密</th>
+
+                        <td><button name="submit" type="submit" value="fileDecode">文本解密</button></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div class="img">
+            <img src="fence.jpg" alt="">
+        </div>
+
+</body>
+
+</html>

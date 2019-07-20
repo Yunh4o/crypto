@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vigenere</title>
+    <style>
+        .fro {
+            float: left;
+        }
+
+        button {
+            display: block;
+        }
+
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        #img1 {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text">
+            <h2>维吉耐尔加密</h2>
+            <p>维吉耐尔加密法是一种多码替换加密法，维吉耐尔密码就是把26个字母循环移位，排列在一起，形成26 X 26的方阵表。
+            </p>
+            <img src="vigenere.jpg" alt="">
+        </div>
+        <div class="fro">
+            <form action="vigenere.php" method="post">
+                <div class="fro">
+                    <table>
+                        <tr>
+                            <th>明文</th>
+                            <td>
+                                <input type="text" name="plaintext" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>秘钥</th>
+                            <td>
+                                <input type="text" name="encodeKey" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" value="encode" name="submit">加密</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="fro">
+                    <table>
+                        <tr>
+                            <th>密文</th>
+                            <td>
+                                <input type="text" name="ciphertext" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>秘钥</th>
+                            <td>
+                                <input type="text" name="decodeKey" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" value="decode" name="submit">解密</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="fro">
+                    <table>
+                        <tr>
+                            <th>加密秘钥</th>
+                            <td>
+                                <input type="text" name="fileEncodeKey" id="">
+                            </td>
+                            <td><button name="submit" type="submit" value="fileEncode">文本加密</button></td>
+                        </tr>
+                        <tr>
+                            <th>解密秘钥</th>
+                            <td>
+                                <input type="text" name="fileDecodeKey" id="">
+                            </td>
+                            <td><button name="submit" type="submit" value="fileDecode">文本解密</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="img">
+            <img id="img1" src="wjne.jpg" alt="">
+           
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

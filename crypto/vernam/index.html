@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vernam</title>
+    <style>
+        /* .fro {
+            float: left;
+        } */
+
+        button {
+            display: block;
+        }
+
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text">
+            <h2>弗纳姆加密</h2>
+            <p>弗纳姆加密法是用随机的重复字符集合作为秘钥，因此也成为一次性板。这里最重要的是：一旦秘钥使用过就不再在任何其他消息中再使用这个秘钥，因此是一次性的，同时要求秘钥的长度等于原消息明文的长度</p>
+        </div>
+        <div class="from">
+            <form action="vernam.php" method="post">
+                <div class="fro">
+                    <table>
+                    <tr>
+                        <th>明文</th>
+                        <td>
+                            <input type="text" name="plaintext" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>秘钥</th>
+                        <td>
+                            <input type="text" name="encodeKey" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="encode" name="submit">加密</button>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+                <div class="fro">
+                    <table>
+                        <tr>
+                            <th>加密秘钥</th>
+                            <td>
+                                <input type="text" name="fileEncodeKey" id="">
+                            </td>
+                            <td><button name="submit" type="submit" value="fileEncode">文本加密</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="img">
+            <img src="Vernam.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

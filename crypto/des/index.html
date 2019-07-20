@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DES</title>
+
+    <style>
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="text">
+            <h2>DES加密 </h2>
+            <p>数据加密标准，是一个分组加密算法，它以64位为分组对数据加密。DES是一个对称算法：即加密和解密使用同一个秘钥。</p>
+            <p>DES以64位为分组对数据加密，主要步骤有6步：</p>
+            <li>输入64位明文</li>
+            <li>将64位明文块送入初始置换函数进行初始置换</li>
+            <li>将初始置换后的内容分为两块，分别为左明文（L0）和右明文（L0），各32位</li>
+            <li>每个左明文与右明文经过16轮加密过程</li>
+            <li>将左明文与右明文重接起来，对组成的块进行最终置换</li>
+            <li>输出64位明文</li>
+        </div>
+
+        <form action="des.php" method="post">
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>明文</th>
+                        <td>
+                            <input type="text" name="plaintext" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="encode" name="submit">加密</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>加密</th>
+                        <td><button name="submit" type="submit" value="fileEncode">文本加密</button></td>
+
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <div class="img">
+            <img src="des2.jpg" alt="">
+
+            <img src="des.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

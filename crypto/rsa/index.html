@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RSA</title>
+    <style>
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="text">
+            <h2>RSA加密</h2>
+            <p>假设A是发送方，B是接收方，RSA加解密过程是：A用B的公钥加密要发送的明文消息PT，并将加密的结果CT通过网络发送给B，B用自己的私钥解密得到明文PT。</p>
+            <p>RSA计算：
+                <ol>
+                    <li>算法中的变量介绍</li>D为解密秘钥，E为加密秘钥，PT明文，CT密文
+                    <li>计算两个大素数的乘积</li>选择两个大素数P,Q 计算N=P*Q
+                    <li>选择公钥E</li>使E不是（P-1）*（Q-1）的因子
+                    <li>选择私钥D</li>使D满足（D*E)mod（P-1）（Q-1）=1
+                </ol>
+
+            </p>
+        </div>
+        <form action="rsa.php" method="post">
+            <div class="fro">
+                <table>
+                    <tr>
+                        <th>PT</th>
+                        <td>
+                            <input type="text" name="PT" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>P</th>
+                        <td>
+                            <input type="text" name="P" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Q</th>
+                        <td>
+                            <input type="text" name="Q" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>CT</th>
+                        <td>
+                            <input type="text" name="CT" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" value="encode" name="submit">加密</button>
+                        </td>
+                        <td>
+                            <button type="submit" value="decode" name="submit">解密</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </form>
+        <div class="img">
+            <img src="rsa.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

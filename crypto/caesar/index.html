@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caesar</title>
+    <style>
+        /* #encode {
+            width: 185px;
+            border: 1px solid gray;
+            float: left;
+        }
+
+        #decode {
+            width: 185px;
+            border: 1px solid gray;
+            float: left;
+        }
+        */
+        .fro {
+            float: left;
+            margin: 0 10px;
+        }
+
+        button {
+            display: block;
+        }
+
+        .text {
+            width: 100%;
+            /* text-align: center; */
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <div class="text">
+            <h2>凯撒加密</h2>
+            <p>凯撒加密是最早最经典的替换法，消息中的每个字母换成在它后面的3个字母的字母，并进行循环替换，即，最后的三个字母反过来用最前面的字母替换。</p>
+            <p>算法改进后秘钥可以是1-25</p>
+        </div>
+        <form name="from1" method="POST" action="caesar.php">
+            <div id="from">
+                <div id="encode" class="fro">
+                    <span>明文</span>
+                    <input name="plaintext" type="text"><br>
+                    <span>秘钥</span>
+                    <input name="encodeKey" type="text">
+                    <button name="submit" type="submit" value="encode">加密</button>
+                </div>
+
+                <div id="decode" class="fro">
+
+                    <span>密文</span>
+                    <input name="ciphertext" type="text"><br>
+                    <span>秘钥</span>
+                    <input name="decodeKey" type="text">
+                    <button name="submit" type="submit" value="decode">解密</button>
+
+
+                </div>
+                <div class="fro">
+                    <span>加密秘钥</span><br>
+                    <input name="fileEncodeKey" type="text">
+                    <button name="submit" type="submit" value="fileEncode">文本加密</button>
+                </div>
+                <div class="fro">
+                    <span>解密秘钥</span><br>
+                    <input name="fileDecodeKey" type="text">
+                    <button name="submit" type="submit" value="fileDecode">文本解密</button>
+                </div>
+            </div>
+
+        </form>
+        <div class="img">
+            <img src="ks.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
